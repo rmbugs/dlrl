@@ -1,10 +1,12 @@
 \documentclass[10pt]{article}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[backend=biber]{biblatex}
 \usepackage{hyperref}
 \usepackage[a4paper, margin=1in]{geometry}
 \usepackage{ctex}
 
+\addbibresource{ref.bib}
 \title{Training Data Selection Methods for Deep Learning Based on Diversity-Aware Heuristic Strategies}
 \author{
     \begin{tabular}{cccc}
@@ -69,7 +71,6 @@ We propose to evaluate the following training data selection strategies:
     \item Random Sampling serves as a baseline to quantify the benefits of heuristic strategies.
 \end{itemize}
 
-\bibliographystyle{plain}
-\bibliography{ref}
+\printbibliography
 
 \end{document}
