@@ -1,0 +1,75 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{ctex}
+
+\title{Training Data Selection Methods for Deep Learning Based on Diversity-Aware Heuristic Strategies}
+\author{
+    \begin{tabular}{cccc}
+        刘子宁 & 雷纯熙 & 张蔚峻 & 伍思亦 \\
+        2401110050 & 2401110045 & 2401110059 & 2401110071 \\
+    \end{tabular}
+}
+\date{}
+\renewcommand{\refname}{References}
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Efficient training of deep learning models often requires selective data sampling to accelerate convergence and enhance generalization. This research investigates data selection methods informed by heuristic strategies, which leverage model-specific metrics to prioritize training samples. The objective is to explore how different selection strategies impact model performance and efficiency in large-scale training tasks.
+
+\section{Problem Setting}
+Given a training dataset $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^N$ and a model $f_\theta(x)$ parameterized by $\theta$, the loss function $L(\theta, x, y)$ is used to measure the discrepancy between predictions and true labels. The problem can be defined as:
+
+\[
+\min_{\theta} \frac{1}{|\mathcal{B}|} \sum_{(x, y) \in \mathcal{B}} L(\theta, x, y),
+\]
+
+where $\mathcal{B} \subseteq \mathcal{D}$ is the selected batch of training samples. The challenge is to construct $\mathcal{B}$ based on criteria that optimize training efficiency while ensuring diversity in the selected data. 
+
+Key considerations:
+\begin{itemize}
+    \item Samples should be selected to maximize their contribution to the training process.
+    \item The selection strategy must balance focus on challenging examples and coverage of the dataset's diversity.
+\end{itemize}
+
+\section{Methods}
+We propose to evaluate the following training data selection strategies:
+\begin{enumerate}
+    \item \textbf{High-Loss Selection}\cite{Loss}: Samples are chosen based on their loss values $L(\theta, x, y)$. Let $\mathcal{B}$ be the top $k$ samples ranked by $L(\theta, x, y)$.
+    \item \textbf{High-Gradient Selection}\cite{Gradient}: Samples are prioritized based on the norm of the gradient of the loss with respect to model parameters:
+    \[
+    \|\nabla_\theta L(\theta, x, y)\|.
+    \]
+    \item \textbf{High-Influence Selection}\cite{Influence}: Samples are selected based on the influence of the input on the loss, calculated as:
+    \[
+    \left\|\frac{\partial L(\theta, x, y)}{\partial x}\right\|.
+    \]
+    \item \textbf{Random Sampling (Baseline)}: Samples are randomly selected from $\mathcal{D}$ without considering loss or gradient metrics.
+\end{enumerate}
+
+\section{Experimental Setup}
+\begin{itemize}
+    \item \textbf{Datasets}: CIFAR-10 and MNIST for image classification tasks.
+    \item \textbf{Model Architectures}: CNNs with varying depths and complexity.
+    \item \textbf{Evaluation Metrics}: 
+    \begin{itemize}
+        \item Final model accuracy on test data.
+        \item Computational cost: Time and resources required for training.
+    \end{itemize}
+\end{itemize}
+
+\section{Expected Outcomes}
+\begin{itemize}
+    \item High-Loss and High-Gradient Selection are expected to accelerate convergence by focusing on challenging examples.
+    \item High-Influence Selection may improve generalization by emphasizing samples that shape the loss landscape.
+    \item Random Sampling serves as a baseline to quantify the benefits of heuristic strategies.
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}
