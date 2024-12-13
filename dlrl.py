@@ -234,7 +234,6 @@ class PrunerContext:
                 probs = F.softmax(outputs, dim=1)
                 probs[torch.arange(probs.size(0), device=self.device), target] -= 1 # calculate error vector in-place
                 el2n[indices] = torch.norm(probs, dim=1, p=2).cpu()
-                print(f"Peak memory: {torch.cuda.max_memory_allocated() / 1024**3:.2f} GB\n")
 
         self.model.train()
         return el2n
