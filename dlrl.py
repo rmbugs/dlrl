@@ -342,7 +342,7 @@ def main():
         trainer.scheduler.step()
 
     test_acc = trainer.test_acc(test_loader)
-    logger.info("Final test Acc: %.6f", test_acc)
+    logger.info("Final Test Acc: %.6f", test_acc)
 
     if config.device.type == 'cuda':
         end_event.record()
