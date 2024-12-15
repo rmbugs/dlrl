@@ -9,6 +9,8 @@ import time
 
 import torch.backends.cudnn
 import torchvision.transforms
+from jupyterlab.semver import test_set
+from matplotlib import pyplot as plt
 from torch.func import functional_call, vmap, grad
 from torch.optim import Adam, SGD
 from torch.utils.data import DataLoader
@@ -102,7 +104,7 @@ def parse_args():
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu',
                        choices=['cuda', 'cpu'], help='device to use for training')
     parser.add_argument('--batch-size', type=int, default=128, help='number of samples per batch')
-    parser.add_argument('--num-workers', type=int, default=4, help='number of worker processes for data loading')
+    parser.add_argument('--num-workers', type=int, default=2, help='number of worker processes for data loading')
 
     # training
     default_params = {
@@ -133,6 +135,9 @@ def parse_args():
     parser.add_argument('--pruning-strategy', type=str, default='random', choices=['random', 'loss', 'loss-grad', 'el2n'])
     parser.add_argument('--pruning-ratio', type=float, default=0.5, help='ratio of data to prune, in range [0, 1]')
     parser.add_argument('--pruning-epoch', type=int, default=params['pruning_epoch'], help='epoch at which to perform pruning')
+
+    # debugging
+    parser.add_argument('--save-hardest', action='store_true', help='save the top 5 hardest samples')
 
     return parser.parse_args()
 
@@ -258,7 +263,32 @@ class Pruner:
         num_samples = ctx.num_samples
         num_keep = int(num_samples * (1 - pruning_ratio))
         scores = self.get_sample_score(ctx)
+
         return torch.argsort(scores, descending=True)[:num_keep]
+
+def save_mnist_samples(indices):
+    train_set = MNIST(
+        root='./datasets/',
+        train=True,
+        download=True
+    )
+    fig = plt.figure(0)
+    fig.set_size_inches(18.5, 10)
+    for i in range(0, 10):
+        fig.add_subplot(2, 5, i + 1)
+        plt.xticks([])
+        plt.yticks([])
+        plt.imshow(train_set[indices[i]][0], cmap='gray')
+        plt.title("{}".format(train_set[indices[i]][1]), fontsize=32)
+    plt.savefig('images/mnist_hard_samples.pdf', bbox_inches='tight')
+
+def save_cifar10_samples(indices):
+    train_set = CIFAR10(
+        root='./datasets/',
+        train=True,
+        download=True
+    )
+    raise NotImplementedError()
 
 def main():
     args = parse_args()
@@ -306,6 +336,14 @@ def main():
         indices = pruner.select_samples(ctx, args.pruning_ratio)
         config.train_set = torch.utils.data.Subset(config.train_set, indices)
         logger.info("Remaining samples: %d", len(config.train_set))
+
+        if args.save_hardest:
+            from os import makedirs
+            makedirs('images', exist_ok=True)
+            if args.dataset == 'MNIST':
+                save_mnist_samples(indices[:10])
+            elif args.dataset == 'CIFAR10':
+                save_cifar10_samples(indices[:10])
 
     # Create CUDA events for timing
     if config.device.type == 'cuda':
