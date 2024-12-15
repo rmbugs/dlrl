@@ -168,7 +168,12 @@ Unlike methods such as the "forgetting score," which requires monitoring the ent
 \end{frame}
 
 \begin{frame}{Numerical Experiment}
-    Repetition rate for the first 10000 samples and last 10000 samples (\(S_1\):loss,\(S_2\):loss-grad,\(S_3\):el2n):
+    The 10 samples with the highest loss in the MNIST dataset:
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{../images/mnist_hard_samples.pdf}
+    \end{center}
+    
+    Repetition rate for the first 10000 samples and last 10000 samples (\(S_1\):Loss,\(S_2\):Loss-Grad,\(S_3\):EL2N):
     \begin{itemize}
         \item \(R_{\text{first} }(S_1,S_2)=96.78\%,R_{\text{last} }(S_1,S_2)=95.01\%\)
         \item \(R_{\text{first} }(S_2,S_3)=96.45\%,R_{\text{last} }(S_2,S_3)=95.89\%\)
@@ -196,6 +201,7 @@ Unlike methods such as the "forgetting score," which requires monitoring the ent
 \begin{frame}{Conclusion}
     Through numerical experiments, we can draw the following conclusions:
     \begin{itemize}
+        \item In smaller datasets, randomness has a greater impact on the results.
         \item The selected data by existing methods have high similarity.
         \item If the pruning ratio is not too large, choosing "hard" examples well be more benificial.
     \end{itemize}
