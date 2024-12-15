@@ -1,6 +1,16 @@
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+env.sh
+.vscode/
 datasets/
 .benchmarks/
-results.json
+/results.json
 pytest.log
 
 # Byte-compiled / optimized / DLL files
@@ -61,14 +71,6 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
-*.out
-*.synctex.gz
-*.bbl
-*.blg
-*.bcf
-*.run.xml
-.vscode/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
