@@ -6,6 +6,10 @@
 *.blg
 *.bcf
 *.run.xml
+*.mp4
+*.toc
+*.snm
+*.nav
 env.sh
 .vscode/
 datasets/
