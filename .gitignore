@@ -6,10 +6,11 @@
 *.blg
 *.bcf
 *.run.xml
+env.sh
 .vscode/
 datasets/
 .benchmarks/
-results.json
+/results.json
 pytest.log
 
 # Byte-compiled / optimized / DLL files
