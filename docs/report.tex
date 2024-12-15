@@ -94,7 +94,7 @@
 
 % 第二节
 \section{Problem Setting}
-\begin{frame}[allowframebreaks]{Problem Setting}
+\begin{frame}{Problem Setting}
     Given a training dataset $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^N$ and a model $f_\theta(x)$ parameterized by $\theta$, the loss function $L(\theta, x, y)$ is used to measure the discrepancy between predictions and true labels. The problem can be defined as:
 
     \[
@@ -121,9 +121,7 @@
         \[\left\|\frac{\partial L(\theta, x, y)}{\partial x}\right\|.\]
         \item \textbf{Random Sampling (Baseline)}: Samples are randomly selected from $\mathcal{D}$ without considering loss or gradient metrics.
     \end{enumerate}
-\end{frame}
 
-\begin{frame}{Methods}
     We conducted experiments comparing several dataset pruning strategies on the MNIST and CIFAR10 datasets.
     \begin{itemize}
         \item Random: Randomly select samples
