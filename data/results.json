@@ -1,0 +1,722 @@
+[
+  {
+    "train_loss": 0.112166,
+    "test_acc": 0.9896,
+    "training_time": 81.12,
+    "dataset": "MNIST",
+    "strategy": "none",
+    "ratio": 0,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:41:37.718340"
+  },
+  {
+    "train_loss": 0.108058,
+    "test_acc": 0.9904,
+    "training_time": 75.73,
+    "dataset": "MNIST",
+    "strategy": "random",
+    "ratio": 0.1,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:43:04.445885"
+  },
+  {
+    "train_loss": 0.110458,
+    "test_acc": 0.9901,
+    "training_time": 70.27,
+    "dataset": "MNIST",
+    "strategy": "random",
+    "ratio": 0.2,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:44:25.981984"
+  },
+  {
+    "train_loss": 0.119036,
+    "test_acc": 0.9886,
+    "training_time": 60.72,
+    "dataset": "MNIST",
+    "strategy": "random",
+    "ratio": 0.3,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:45:39.550247"
+  },
+  {
+    "train_loss": 0.121174,
+    "test_acc": 0.9872,
+    "training_time": 52.96,
+    "dataset": "MNIST",
+    "strategy": "random",
+    "ratio": 0.4,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:46:45.067199"
+  },
+  {
+    "train_loss": 0.144646,
+    "test_acc": 0.9855,
+    "training_time": 44.52,
+    "dataset": "MNIST",
+    "strategy": "random",
+    "ratio": 0.5,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:47:42.868374"
+  },
+  {
+    "train_loss": 0.129175,
+    "test_acc": 0.99,
+    "training_time": 76.59,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "ratio": 0.1,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:49:17.129811"
+  },
+  {
+    "train_loss": 0.141297,
+    "test_acc": 0.9877,
+    "training_time": 69.92,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "ratio": 0.2,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:50:44.177378"
+  },
+  {
+    "train_loss": 0.176531,
+    "test_acc": 0.9874,
+    "training_time": 62.38,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "ratio": 0.3,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:52:04.045417"
+  },
+  {
+    "train_loss": 0.195824,
+    "test_acc": 0.9879,
+    "training_time": 53.06,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "ratio": 0.4,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:53:14.010451"
+  },
+  {
+    "train_loss": 0.230885,
+    "test_acc": 0.9885,
+    "training_time": 45.13,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "ratio": 0.5,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:54:16.171036"
+  },
+  {
+    "train_loss": 0.137955,
+    "test_acc": 0.9879,
+    "training_time": 76.23,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "ratio": 0.1,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:55:57.565115"
+  },
+  {
+    "train_loss": 0.177896,
+    "test_acc": 0.9871,
+    "training_time": 70.42,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "ratio": 0.2,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:57:32.259655"
+  },
+  {
+    "train_loss": 0.165785,
+    "test_acc": 0.9895,
+    "training_time": 60.72,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "ratio": 0.3,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T20:58:56.704911"
+  },
+  {
+    "train_loss": 0.207032,
+    "test_acc": 0.9885,
+    "training_time": 52.39,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "ratio": 0.4,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T21:00:12.120249"
+  },
+  {
+    "train_loss": 0.219302,
+    "test_acc": 0.9877,
+    "training_time": 44.08,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "ratio": 0.5,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T21:01:19.109398"
+  },
+  {
+    "train_loss": 0.132955,
+    "test_acc": 0.9892,
+    "training_time": 75.95,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "ratio": 0.1,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T21:02:51.542986"
+  },
+  {
+    "train_loss": 0.170991,
+    "test_acc": 0.987,
+    "training_time": 69.39,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "ratio": 0.2,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T21:04:17.055475"
+  },
+  {
+    "train_loss": 0.179708,
+    "test_acc": 0.9887,
+    "training_time": 60.42,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "ratio": 0.3,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T21:05:33.884578"
+  },
+  {
+    "train_loss": 0.178824,
+    "test_acc": 0.9884,
+    "training_time": 53.3,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "ratio": 0.4,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T21:06:43.670856"
+  },
+  {
+    "train_loss": 0.249044,
+    "test_acc": 0.9881,
+    "training_time": 44.79,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "ratio": 0.5,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T21:07:45.176185"
+  },
+  {
+    "train_loss": 0.020293,
+    "test_acc": 0.9176,
+    "training_time": 3390.26,
+    "dataset": "CIFAR10",
+    "strategy": "none",
+    "ratio": 0,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T22:04:21.152510"
+  },
+  {
+    "train_loss": 0.016135,
+    "test_acc": 0.9236,
+    "training_time": 3047.19,
+    "dataset": "CIFAR10",
+    "strategy": "random",
+    "ratio": 0.1,
+    "type": "ratio_based",
+    "timestamp": "2024-12-13T23:00:52.771419"
+  },
+  {
+    "train_loss": 0.019465,
+    "test_acc": 0.9159,
+    "training_time": 4709.19,
+    "dataset": "CIFAR10",
+    "strategy": "random",
+    "ratio": 0.2,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T00:25:07.644646"
+  },
+  {
+    "train_loss": 0.022477,
+    "test_acc": 0.9143,
+    "training_time": 4329.79,
+    "dataset": "CIFAR10",
+    "strategy": "random",
+    "ratio": 0.3,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T01:47:44.618058"
+  },
+  {
+    "train_loss": 0.021035,
+    "test_acc": 0.9124,
+    "training_time": 3720.59,
+    "dataset": "CIFAR10",
+    "strategy": "random",
+    "ratio": 0.4,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T03:00:04.106668"
+  },
+  {
+    "train_loss": 0.011839,
+    "test_acc": 0.9094,
+    "training_time": 3110.88,
+    "dataset": "CIFAR10",
+    "strategy": "random",
+    "ratio": 0.5,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T04:02:12.986745"
+  },
+  {
+    "train_loss": 0.022465,
+    "test_acc": 0.9222,
+    "training_time": 5571.99,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "ratio": 0.1,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T05:45:42.676050"
+  },
+  {
+    "train_loss": 0.019502,
+    "test_acc": 0.9279,
+    "training_time": 4943.83,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "ratio": 0.2,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T07:18:43.708847"
+  },
+  {
+    "train_loss": 0.02626,
+    "test_acc": 0.9242,
+    "training_time": 4336.51,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "ratio": 0.3,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T08:41:47.647729"
+  },
+  {
+    "train_loss": 0.022535,
+    "test_acc": 0.9224,
+    "training_time": 3612.54,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "ratio": 0.4,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T09:52:37.785589"
+  },
+  {
+    "train_loss": 0.020089,
+    "test_acc": 0.9174,
+    "training_time": 3040.79,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "ratio": 0.5,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T10:53:47.934510"
+  },
+  {
+    "train_loss": 0.019979,
+    "test_acc": 0.9271,
+    "training_time": 5430.42,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "ratio": 0.1,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T12:35:37.864758"
+  },
+  {
+    "train_loss": 0.022215,
+    "test_acc": 0.9263,
+    "training_time": 4833.53,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "ratio": 0.2,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T14:07:30.877680"
+  },
+  {
+    "train_loss": 0.015894,
+    "test_acc": 0.927,
+    "training_time": 4235.16,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "ratio": 0.3,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T15:29:24.484472"
+  },
+  {
+    "train_loss": 0.020743,
+    "test_acc": 0.9253,
+    "training_time": 2645.92,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "ratio": 0.4,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T16:24:51.790666"
+  },
+  {
+    "train_loss": 0.014895,
+    "test_acc": 0.9293,
+    "training_time": 1717.8,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "ratio": 0.5,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T17:00:10.259690"
+  },
+  {
+    "train_loss": 0.024278,
+    "test_acc": 0.9252,
+    "training_time": 3058.38,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "ratio": 0.1,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T17:57:01.873870"
+  },
+  {
+    "train_loss": 0.027201,
+    "test_acc": 0.9261,
+    "training_time": 2723.39,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "ratio": 0.2,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T18:48:19.217654"
+  },
+  {
+    "train_loss": 0.019706,
+    "test_acc": 0.9256,
+    "training_time": 2386.57,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "ratio": 0.3,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T19:33:59.131211"
+  },
+  {
+    "train_loss": 0.025655,
+    "test_acc": 0.9193,
+    "training_time": 2048.61,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "ratio": 0.4,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T20:14:00.901158"
+  },
+  {
+    "train_loss": 0.022079,
+    "test_acc": 0.9227,
+    "training_time": 1712.03,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "ratio": 0.5,
+    "type": "ratio_based",
+    "timestamp": "2024-12-14T20:48:26.206537"
+  },
+  {
+    "train_loss": 0.269262,
+    "test_acc": 0.9874,
+    "training_time": 43.92,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "pruning_epoch": 1,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:49:22.175933"
+  },
+  {
+    "train_loss": 0.20386,
+    "test_acc": 0.9882,
+    "training_time": 45.82,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "pruning_epoch": 2,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:50:22.883928"
+  },
+  {
+    "train_loss": 0.28313,
+    "test_acc": 0.9878,
+    "training_time": 46.18,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "pruning_epoch": 3,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:51:26.630601"
+  },
+  {
+    "train_loss": 0.218217,
+    "test_acc": 0.9883,
+    "training_time": 44.41,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "pruning_epoch": 4,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:52:31.730050"
+  },
+  {
+    "train_loss": 0.22274,
+    "test_acc": 0.9881,
+    "training_time": 44.89,
+    "dataset": "MNIST",
+    "strategy": "loss",
+    "pruning_epoch": 5,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:53:38.918531"
+  },
+  {
+    "train_loss": 0.247018,
+    "test_acc": 0.9861,
+    "training_time": 44.92,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "pruning_epoch": 1,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:54:41.428123"
+  },
+  {
+    "train_loss": 0.263684,
+    "test_acc": 0.9854,
+    "training_time": 45.36,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "pruning_epoch": 2,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:55:49.548235"
+  },
+  {
+    "train_loss": 0.216923,
+    "test_acc": 0.9898,
+    "training_time": 45.24,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "pruning_epoch": 3,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:56:59.500033"
+  },
+  {
+    "train_loss": 0.214915,
+    "test_acc": 0.9888,
+    "training_time": 44.4,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "pruning_epoch": 4,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:58:11.589004"
+  },
+  {
+    "train_loss": 0.206949,
+    "test_acc": 0.9882,
+    "training_time": 45.11,
+    "dataset": "MNIST",
+    "strategy": "loss-grad",
+    "pruning_epoch": 5,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T20:59:25.854519"
+  },
+  {
+    "train_loss": 0.221932,
+    "test_acc": 0.988,
+    "training_time": 44.98,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "pruning_epoch": 1,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T21:00:21.963614"
+  },
+  {
+    "train_loss": 0.218287,
+    "test_acc": 0.9897,
+    "training_time": 44.89,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "pruning_epoch": 2,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T21:01:20.895745"
+  },
+  {
+    "train_loss": 0.227086,
+    "test_acc": 0.9884,
+    "training_time": 44.52,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "pruning_epoch": 3,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T21:02:22.110982"
+  },
+  {
+    "train_loss": 0.249296,
+    "test_acc": 0.9862,
+    "training_time": 45.86,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "pruning_epoch": 4,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T21:03:27.047613"
+  },
+  {
+    "train_loss": 0.262229,
+    "test_acc": 0.9878,
+    "training_time": 44.61,
+    "dataset": "MNIST",
+    "strategy": "el2n",
+    "pruning_epoch": 5,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T21:04:32.700936"
+  },
+  {
+    "train_loss": 0.020028,
+    "test_acc": 0.8998,
+    "training_time": 1714.3,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "pruning_epoch": 4,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T21:34:32.245510"
+  },
+  {
+    "train_loss": 0.019477,
+    "test_acc": 0.9176,
+    "training_time": 1718.83,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "pruning_epoch": 8,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T22:05:45.932398"
+  },
+  {
+    "train_loss": 0.027465,
+    "test_acc": 0.927,
+    "training_time": 1718.95,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "pruning_epoch": 12,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T22:38:07.664534"
+  },
+  {
+    "train_loss": 0.0199,
+    "test_acc": 0.9285,
+    "training_time": 1715.73,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "pruning_epoch": 16,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T23:11:33.542240"
+  },
+  {
+    "train_loss": 0.020288,
+    "test_acc": 0.9214,
+    "training_time": 1714.71,
+    "dataset": "CIFAR10",
+    "strategy": "loss",
+    "pruning_epoch": 20,
+    "type": "epoch_based",
+    "timestamp": "2024-12-14T23:46:08.170287"
+  },
+  {
+    "train_loss": 0.019999,
+    "test_acc": 0.8772,
+    "training_time": 1719.09,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "pruning_epoch": 4,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T00:16:59.956483"
+  },
+  {
+    "train_loss": 0.021932,
+    "test_acc": 0.9108,
+    "training_time": 1720.62,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "pruning_epoch": 8,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T00:48:55.551658"
+  },
+  {
+    "train_loss": 0.017847,
+    "test_acc": 0.925,
+    "training_time": 1718.53,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "pruning_epoch": 12,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T01:22:07.528491"
+  },
+  {
+    "train_loss": 0.021187,
+    "test_acc": 0.9241,
+    "training_time": 1713.53,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "pruning_epoch": 16,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T01:56:11.196618"
+  },
+  {
+    "train_loss": 0.015547,
+    "test_acc": 0.9188,
+    "training_time": 1714.52,
+    "dataset": "CIFAR10",
+    "strategy": "loss-grad",
+    "pruning_epoch": 20,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T02:31:31.339344"
+  },
+  {
+    "train_loss": 0.016983,
+    "test_acc": 0.8941,
+    "training_time": 1720.56,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "pruning_epoch": 4,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T03:01:33.666060"
+  },
+  {
+    "train_loss": 0.017989,
+    "test_acc": 0.8847,
+    "training_time": 1719.61,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "pruning_epoch": 8,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T03:32:43.287510"
+  },
+  {
+    "train_loss": 0.017005,
+    "test_acc": 0.9185,
+    "training_time": 1719.45,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "pruning_epoch": 12,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T04:05:00.334209"
+  },
+  {
+    "train_loss": 0.026272,
+    "test_acc": 0.9173,
+    "training_time": 1720.18,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "pruning_epoch": 16,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T04:38:26.312458"
+  },
+  {
+    "train_loss": 0.020492,
+    "test_acc": 0.9286,
+    "training_time": 1716.12,
+    "dataset": "CIFAR10",
+    "strategy": "el2n",
+    "pruning_epoch": 20,
+    "type": "epoch_based",
+    "timestamp": "2024-12-15T05:12:55.672336"
+  }
+]
