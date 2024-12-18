@@ -114,12 +114,13 @@
 \begin{frame}[allowframebreaks]{Methods}
     We propose to evaluate the following training data selection strategies:
     \begin{enumerate}
+        \item \textbf{Random Sampling (Baseline)}: Samples are randomly selected from $\mathcal{D}$ without considering loss or gradient metrics.
         \item \textbf{High-Loss Selection}\cite{Loss}: Samples are chosen based on their loss values $L(\theta, x, y)$. Let $\mathcal{B}$ be the top $k$ samples ranked by $L(\theta, x, y)$.
         \item \textbf{High-Gradient Selection}\cite{Gradient}: Samples are prioritized based on the norm of the gradient of the loss with respect to model parameters:
         \[\|\nabla_\theta L(\theta, x, y)\|.\]
         \item \textbf{High-Influence Selection}\cite{Influence}: Samples are selected based on the influence of the input on the loss, calculated as:
         \[\left\|\frac{\partial L(\theta, x, y)}{\partial x}\right\|.\]
-        \item \textbf{Random Sampling (Baseline)}: Samples are randomly selected from $\mathcal{D}$ without considering loss or gradient metrics.
+        
     \end{enumerate}
 
     We conducted experiments comparing several dataset pruning strategies on the MNIST and CIFAR10 datasets.
@@ -129,6 +130,57 @@
         \item Loss-Grad: Select samples with the largest loss gradient norms on the surrogate model
         \item EL2N\cite{paul2021deep}: Select samples with the largest error vector norms on the surrogate model
     \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{GraNd Score}
+\textbf{training set}: \( S = \{(x_i, y_i)\}_{i=1}^N \) \\ 
+\textbf{output of the neural network}: \( f_w(x) \in \mathbb{R}^K \) \\
+\textbf{cross-entropy loss}:\(
+\ell(\hat{p}, y) = \sum_{k=1}^K y^{(k)} \log \hat{p}^{(k)}
+\),where,\( p(w, x) = \sigma(f(w, x)) \)\\
+
+
+\textbf{SGD iterates}:\( w_0, w_1, w_2, \ldots, w_T \)  for some sequence of minibatches \( S_0, S_1, \ldots, S_{T-1} \subseteq S \) of size \( M \)
+\[
+w_t = w_{t-1} - \eta \sum_{(x,y) \in S_{t-1}} g_{t-1}(x, y), 
+\]
+for \( g_{t-1}(x, y) = \nabla_{w_{t-1}} \ell(p(w_{t-1}, x), y) \), and \( t = 1, \ldots, T \).
+    
+\textbf{ GraNd score}:
+\[
+\chi_{t}(x, y) = \mathbb{E}_{w_{t}}\left\|g_{t}(x, y)\right\|_{2}
+\]
+
+\textbf{key}:
+    $
+    \Delta_{t}((x, y), S_{t}) = -\frac{d\ell(f_{w_{t}}(x), y)}{dt}
+    $
+
+\[
+\Delta_{t}((x, y), S_{t}) = g_{t}(x, y) \frac{d w_{t}}{dt}
+\]
+
+\begin{itemize}
+    \item Relates to discrete time dynamics:
+    \[
+    \frac{d w_{t}}{dt} \approx w_{t+1} - w_{t} = -\eta \sum_{(x', y') \in S_{t}} g_{t}(x', y')
+    \]
+    \item Study \( \Delta_{t}((x^{*}, y^{*}), S) \) to rank training examples.
+\end{itemize}
+\textbf{Lemma} Let \( S_{\neg j} = S \backslash (x_{j}, y_{j}) \). Then for all \( (x^{*}, y^{*}) \), there exists \( c \) such that:
+\[
+\left\|\Delta_{t}((x^{*}, y^{*}), S) - \Delta_{t}((x^{*}, y^{*}), S_{\neg j})\right\| \leq c \left\|g_{t}(x_{j}, y_{j})\right\|
+\]
+\scriptsize
+\textbf{Proof:}For a given example \((x^*, y^*)\), the chain rule yields
+\[
+\Delta_t((x^*, y^*), S) = -\frac{d\ell(f_t(x^*), y^*)}{dt} = \frac{d\ell(f_t(x^*), y^*)}{dw_t} \frac{dw_t}{dt}.
+\]
+Since the weights are updated using SGD, we have
+\[
+\frac{dw_t}{dt} = -\eta \sum_{(x_j, y_j) \in S_t} g_t(x_j, y_j).
+\]
+Letting \( c = \eta \left\| \frac{d\ell(f_t(x^*), y^*)}{dw_t} \right\| \), the result follows.
 \end{frame}
 
 \begin{frame}[allowframebreaks]{EL2N Introduction}
